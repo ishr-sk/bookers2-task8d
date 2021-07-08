@@ -1,0 +1,6 @@
+<!--この部分のHTMLだけ、renderで部分的に更新する-->
+<!--%= book.id %を追加（これ大事！！！！！！！！！！！！！！）-->
+<!--controllerの変数一緒（@book）-->
+$(".favorites-<%= @book.id %>").html("<%= j(render 'favorites/favorite-btn', book: @book) %>");
+
+alert('いいね削除！');
