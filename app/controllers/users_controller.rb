@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     # ＠userが投稿したbookを表示する
-    @books = @user.books
+    @books = @user.books.order(created_at: :desc)
     @book = Book.new
   end
 

@@ -8,6 +8,8 @@
     </div>
     <div class='col-md-8 offset-md-1'>
       <h2>Books</h2>
+      <%= link_to '新しい順', user_path(@user) %>｜
+      <%= link_to '評価の高い順', books_path(sort_create: "true") %>
       <%= render 'books/index',books: @books %>
     </div>
   </div>
