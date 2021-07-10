@@ -26,7 +26,8 @@ class Book < ApplicationRecord
 
   # 一覧ページを新しい順（降順）にする：desc
   # でもこれだとデフォルトの順番そのものを変えてるから全部に適応されてしまっている
-  default_scope -> {order(created_at: :desc)}
+  # default_scope -> {order(created_at: :desc)}
+ 
 
 	validates :title, presence: true
 	validates :body, presence: true, length: {maximum: 200}
